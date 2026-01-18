@@ -1,0 +1,160 @@
+/* History Styles */
+.history-section {
+    width: 100%;
+    padding: 10px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.history-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.history-header h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+/* Wrapper */
+.slider-wrapper {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+}
+
+/* Slide */
+.history-item {
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.history-item.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Image */
+.image-container {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content */
+.content-container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+.tag {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: #c5a059;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.content-container h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.content-container p,
+.content-container ol {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Buttons */
+.nav-buttons {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.nav-btn {
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 14px 30px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .history-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .content-container h2 {
+        font-size: 2.2rem;
+    }
+
+    .image-container img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-section {
+        padding: 90px 15px 60px;
+    }
+
+    .content-container {
+        padding: 25px;
+    }
+
+    .content-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .nav-buttons {
+        margin-top: 30px;
+        gap: 12px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        max-width: 160px;
+        text-align: center;
+    }
+}

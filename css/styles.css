@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Relief', sans-serif;
+}
+
+body {
+    color: #000;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 200px;
+}
+
+header .logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 20vh;
+    width: auto;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav .socials {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Underline styles */
+a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+/* Slide in */
+nav > a {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 4px 0;
+}
+
+/* Underline */
+nav > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Slide-In */
+nav > a:hover::after {
+    transform: translateX(0);
+}
+
+.spacer {
+    width: 2px;
+    height: 20px;
+    background: #000;
+}
+
+nav .socials i {
+    font-size: 24px;
+}
+
+/* Content Section */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: calc(60vh - 90px);
+    position: relative;
+    overflow: hidden;
+    justify-items: center;
+    align-items: center; 
+}
+
+.content .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.content .left img {
+    max-width: 100%;
+    width: 80%;        /* adjustable */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;    /* center image */
+}
+
+.content .right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 300px 0 0;
+}
+
+.content .jp {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.content h1 {
+    font-size: 90px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.content .tagline {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.content .explore-btn {
+    padding: 16px 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border : transparent;
+    background: #0f0f0f;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.content .explore-btn:hover {
+    background: #8b5e3c;
+    color: #fff;
+}
+
+.content .bg-text {
+    position: absolute;
+    right: 1px;
+    bottom: 40px;
+    width: 10vh; 
+    opacity: 0.1;
+}
+
+/* Floating pentagon shape #1 */
+.content::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    left: -150px;
+    width: 400px;
+    height: 400px;
+    background: #8b5e3c;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    opacity: 0.08;
+    z-index: 0;
+    transform: rotate(15deg);
+    animation: floatPent 12s ease-in-out infinite;
+}
+
+/* Floating pentagon shape #2 */
+.content::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: #0f0f0f;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    opacity: 0.04;
+    z-index: 0;
+    transform: rotate(-10deg);
+    animation: floatPentReverse 15s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes floatPent {
+    0% { transform: rotate(15deg) translateY(0); }
+    50% { transform: rotate(15deg) translateY(15px); }
+    100% { transform: rotate(15deg) translateY(0); }
+}
+
+@keyframes floatPentReverse {
+    0% { transform: rotate(-10deg) translateY(0); }
+    50% { transform: rotate(-10deg) translateY(-10px); }
+    100% { transform: rotate(-10deg) translateY(0); }
+}
+
+.content .left,
+.content .right {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Kuro Section */
+.kuro-section {
+    width: 100%;
+    min-height: 800px; 
+    margin-top: 150px;
+    padding: 80px 10%;
+    background-color: #121212; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    color: #f5f5f5; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a soft glow in the background for ambience */
+.kuro-section::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 94, 60, 0.1) 0%, transparent 70%);
+    top: 10%;
+    left: 10%;
+}
+
+/* Left side branding */
+.kuro-section .left h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* Right side cards */
+.kuro-section .right .card {
+    display: flex;
+    align-items: flex-start; 
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.kuro-section .right .card:hover {
+    transform: translateX(10px); 
+}
+
+.kuro-section .right .card i {
+    font-size: 32px; 
+    color: #8b5e3c;  
+    margin-top: 8px;
+}
+
+.kuro-section .right .card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.kuro-section .right .card p {
+    color: #a0a0a0;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+.spacer-container {
+    width: 3px;
+    height: 200px;
+    background: #fff;
+}
+
+.kuro-section .bg-logo {
+    position: absolute;
+    left: 1px;
+    bottom: -40px;
+    rotate: 25deg;
+    width: 10vh;
+    opacity: 0.05;
+}
+
+.kuro-section .bg-logo img {
+    width: 400px;
+    height: auto;
+}
+
+/* Time Panel Section */
+.open-hour-section {
+    padding: 200px 10%;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wrapper */
+.time-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 120px;
+}
+
+/* Left */
+.time-left .time-label {
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    color: #8b5e3c;
+}
+
+.time-left h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+}
+
+.time-left .time-desc {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 380px;
+}
+
+/* Right Cards */
+.time-right {
+    display: flex;
+    gap: 30px;
+}
+
+.time-card {
+    flex: 1;
+    padding: 40px 30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+.time-card i {
+    font-size: 36px;
+    color: #8b5e3c;
+    margin-bottom: 20px;
+}
+
+.time-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.time-card p {
+    color: #555;
+}
+
+/* Background Icon */
+.time-bg {
+    position: absolute;
+    right: -120px;
+    bottom: -120px;
+    font-size: 420px;
+    opacity: 0.04;
+    color: #000;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.circle-audio-player {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #8b5e3c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    transition: background 0.3s, transform 0.2s;
+    z-index: 2;
+}
+
+.circle-audio-player:hover {
+    background: #0f0f0f;
+    transform: scale(1.1);
+    border: 2px solid #8b5e3c;
+}
+
+.circle-audio-player i {
+    color: #fff;
+    font-size: 28px;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .time-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .time-right {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Tablet & below (1200px) */
+@media (max-width: 1200px) {
+    header .logo img {
+        height: 18vh;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .content h1 {
+        font-size: 70px;
+    }
+
+    .content .tagline {
+        font-size: 18px;
+    }
+
+    .kuro-section .left h1 {
+        font-size: 3.5rem;
+    }
+
+    .time-left h1 {
+        font-size: 3.5rem;
+    }
+
+    .time-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Medium tablet / large phone (900px) */
+@media (max-width: 900px) {
+
+    /* Header */
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 50px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Content */
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .content .right {
+        padding: 0;
+        align-items: center;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content .tagline {
+        font-size: 16px;
+    }
+
+    /* Kuro Section */
+    .kuro-section {
+        flex-direction: column;
+        gap: 50px;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .kuro-section .right .card {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Open Hour Section */
+    .time-wrapper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .time-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Small phones (600px) */
+@media (max-width: 600px) {
+    header .logo img {
+        height: 15vh;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Content */
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content .tagline {
+        font-size: 14px;
+    }
+
+    .content .explore-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    /* Kuro Section */
+    .kuro-section .left h1 {
+        font-size: 2.5rem;
+    }
+
+    .kuro-section .right .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .kuro-section .right .card p {
+        font-size: 14px;
+    }
+
+    /* Open Hour Section */
+    .time-left h1 {
+        font-size: 2.5rem;
+    }
+
+    .time-card {
+        padding: 20px;
+    }
+
+    .time-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .time-card p {
+        font-size: 14px;
+    }
+}
+
+/* Extra small phones (480px) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 32px;
+    }
+
+    .content .tagline {
+        font-size: 13px;
+    }
+
+    .content .explore-btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .kuro-section .left h1 {
+        font-size: 2rem;
+    }
+
+    .kuro-section .right .card h3 {
+        font-size: 1rem;
+    }
+
+    .kuro-section .right .card p {
+        font-size: 13px;
+    }
+
+    .time-left h1 {
+        font-size: 2rem;
+    }
+
+    .time-card h3 {
+        font-size: 1rem;
+    }
+
+    .time-card p {
+        font-size: 12px;
+    }
+}
+
+/* Optional: make icon sizes scale down */
+@media (max-width: 900px) {
+    .kuro-section .right .card i {
+        font-size: 28px;
+    }
+    
+    .time-card i {
+        font-size: 30px;
+    }
+}

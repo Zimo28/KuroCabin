@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon link -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!-- Title -->
+    <title>KuroCabin - Da Kohi Ke Blum</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/LogoRasmi.png" alt="KuroCabin Logo">
+            </a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pages/about-us.html">About Us</a>
+            <a href="pages/product.html">Products</a>
+            <a href="pages/gallery.html">Gallery</a>
+            <a href="pages/faq.html">FAQ</a>
+            <a href="pages/contact.html">Contact</a>
+            <!-- Line -->
+            <div class="spacer"></div>
+            <div class="socials">
+                <a href="https://www.instagram.com/kurocabin25" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://www.tiktok.com/@kurocabin25" target="_blank">
+                    <i class="ri-tiktok-fill"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <section class="left">
+            <img src="assets/images/KuroCabinMascot.png" alt="Kuro Cabin Mascot" />
+        </section>
+
+        <section class="right">
+            <div class="jp">黒キャビン</div>
+                <h1>KURO CABIN</h1>
+            <div class="tagline">
+                Da Kohi Ke Blum
+            </div>
+            <button class="explore-btn" onclick="map()">
+                <i class="ri-map-2-line"></i> 
+                Explore Location
+            </button>
+            <div class="bg-text">
+                <img src="assets/images/JPKuroCabin.png" alt="JP Kuro Cabin" />
+            </div>
+        </section>
+    </section>
+
+    <!-- KuroCabin Section -->
+    <section class="kuro-section">
+        <div class="left">
+            <h1>What Makes KuroCabin Different?</h1>
+        </div>
+
+        <div class="spacer-container"></div>
+
+        <div class="right">
+            <div class="card">
+                <i class="ri-moon-cloudy-fill"></i>
+                <div class="feature-info">
+                   <h2>Perfect Ambience</h2>
+                    <p>A curated atmosphere designed for your peace of mind and focus.</p> 
+                </div>
+            </div>
+            <div class="card">
+                <i class="ri-wallet-2-fill"></i>
+                <div class="feature-info">
+                   <h2>Affordable Luxury</h2>
+                    <p>Premium quality experiences at a price that respects your wallet.</p> 
+                </div>
+            </div>
+            <div class="card">
+                <i class="ri-cup-fill"></i>
+                <div class="feature-info">
+                   <h2>Best & Cozy</h2>
+                    <p>Maximum comfort guaranteed, making Kurocabin your home away from home.</p> 
+                </div>
+            </div>
+        </div>
+        <div class="bg-logo">
+            <img src="assets/images/CupLogo.png" alt="JP Kuro Cabin" />
+        </div>
+    </section>
+
+    <!-- Open Hour Section -->
+    <section class="open-hour-section">
+        <div class="time-wrapper">
+
+            <div class="time-left">
+                <span class="time-label">OUR TIME</span>
+                <h1>Operating Hours</h1>
+                <p class="time-desc">
+                    Take your time. Coffee tastes better when there’s no rush.
+                </p>
+            </div>
+
+            <div class="time-right">
+                <div class="time-card">
+                    <i class="ri-sun-line"></i>
+                    <h3>Sunday - Friday</h3>
+                    <p>8:00 AM - 11:00 PM</p>
+                </div>
+
+                <div class="time-card">
+                    <i class="ri-moon-line"></i>
+                    <h3>Saturday</h3>
+                    <p>9:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="time-bg">
+            <i class="ri-time-line"></i>
+        </div>
+    </section>
+
+    <!-- Circle Audio Player -->
+    <div class="circle-audio-player" id="circle-audio-player">
+        <i class="ri-play-line" id="audio-icon"></i>
+    </div>
+
+    <audio id="bg-audio" loop>
+        <source src="assets/audio/cafe-bgm.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KuroCabin. All rights reserved.</p>
+        <iframe src="https://free.timeanddate.com/clock/ia8x909d/n5090/fcfff/tct/pct/tt0" frameborder="0" width="340" height="18" allowtransparency="true"></iframe>
+    </footer>
+
+
+    <!-- Link JS -->
+    <script src="js/map.js"></script>
+    <script src="js/audioplayer.js"></script>
+
+</body>
+</html>

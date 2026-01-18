@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon link -->
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!-- Title -->
+    <title>KuroCabin - Products</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/images/LogoRasmi.png" alt="KuroCabin Logo">
+            </a>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../pages/about-us.html">About Us</a>
+            <a href="../pages/product.html">Products</a>
+            <a href="../pages/gallery.html">Gallery</a>
+            <a href="../pages/faq.html">FAQ</a>
+            <a href="../pages/contact.html">Contact</a>
+
+            <!-- Line -->
+            <div class="spacer"></div>
+            <div class="socials">
+                <a href="https://www.instagram.com/kurocabin25" target="_blank">
+                    <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://www.tiktok.com/@kurocabin25" target="_blank">
+                    <i class="ri-tiktok-fill"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-spacer"></div>
+                <div class="header-title">
+                    <h1>Our Products <span class="jp">| 当社の製品</span></h1>
+                </div>
+
+                <div class="header-tools">
+                    <div class="cart-wrapper">
+
+                        <button class="cart-icon-btn" id="cartToggle" aria-label="Open cart">
+                            🛒 <span class="cart-badge" id="cartCount">0</span>
+                        </button>
+
+                        <div class="cart-dropdown" id="cartDropdown" hidden>
+                            <div class="cart-dropdown-head">
+                                <strong>Cart</strong>
+                                <button class="cart-clear" id="clearCart">Clear</button>
+                            </div>
+
+                            <div class="cart-dropdown-items" id="cartItems">
+                                <p class="cart-empty">Your cart is empty.</p>
+                            </div>
+
+                            <div class="cart-dropdown-foot">
+                            <div class="cart-total">
+                                <span>Total</span>
+                                <strong id="cartTotal">RM 0.00</strong>
+                            </div>
+                                <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="menu-btn" id="openMenu">View Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="product-section">
+        <div class="section-header">
+            <h2 class="section-title">Drinks</h2>
+        </div>
+
+        <div class="product-container">
+            <div class="product-card" data-id="d1" data-name="Caramel Macchiato" data-price="11">
+                <img src="../assets/images/products/air1.jpeg" alt="Caramel Macchiato" />
+                <h3>Caramel Macchiato</h3>
+                <h5>キャラメルマキアート</h5>
+                <p class="price">RM 11.00</p>
+                <p class="desc">Smooth coffee topped with caramel drizzle</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d2" data-name="Matcha Strawberry" data-price="12">
+                <img src="../assets/images/products/air2.jpeg" alt="Matcha Strawberry" />
+                <h3>Matcha Strawberry</h3>
+                <h5>抹茶いちご</h5>
+                <p class="price">RM 12.00</p>
+                <p class="desc">Earthy matcha meets sweet strawberry.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d3" data-name="Caffe Latte" data-price="10">
+                <img src="../assets/images/products/air3.jpeg" alt="Caffe Latte" />
+                <h3>Caffe Latte</h3>
+                <h5>カフェラテ</h5>
+                <p class="price">RM 10.00</p>
+                <p class="desc">Rich espresso, perfectly milky.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d4" data-name="Matcha Vanilla" data-price="13">
+                <img src="../assets/images/products/air4.jpeg" alt="Matcha Vanilla" />
+                <h3>Matcha Vanilla</h3>
+                <h5>抹茶バニラ</h5>
+                <p class="price">RM 13.00</p>
+                <p class="desc">Creamy matcha infused with vanilla.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d5" data-name="Buttercream Matcha" data-price="14">
+                <img src="../assets/images/products/air5.jpeg" alt="Buttercream Matcha" />
+                <h3>Buttercream Matcha</h3>
+                <h5>バタークリーム抹茶</h5>
+                <p class="price">RM 14.00</p>
+                <p class="desc">Premium matcha with silky buttercream.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d6" data-name="Buttercream Strawberry" data-price="13">
+                <img src="../assets/images/products/air6.jpeg" alt="Buttercream Strawberry" />
+                <h3>Buttercream Strawberry</h3>
+                <h5>バタークリームストロベリー</h5>
+                <p class="price">RM 13.00</p>
+                <p class="desc">Fresh strawberry blended with smooth buttercream.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d7" data-name="Buttercream Chocolate" data-price="15">
+                <img src="../assets/images/products/air7.jpeg" alt="Buttercream Chocolate" />
+                <h3>Buttercream Chocolate</h3>
+                <h5>バタークリームチョコレート</h5>
+                <p class="price">RM 15.00</p>
+                <p class="desc">Decadent chocolate with creamy buttercream.</p>
+                <button class="add-btn">Add</button>
+            </div>
+
+            <div class="product-card" data-id="d8" data-name="Buttercream Spanish Latte" data-price="14">
+                <img src="../assets/images/products/air8.jpeg" alt="Buttercream Spanish Latte" />
+                <h3>Buttercream Spanish Latte</h3>
+                <h5>バタークリームスパニッシュラテ</h5>
+                <p class="price">RM 14.00</p>
+                <p class="desc">Bold espresso with luxurious buttercream.</p>
+                <button class="add-btn">Add</button>
+            </div>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">Food</h2>
+        </div>
+
+        <ul class="product-container">
+            <li class="product-card" data-id="f1" data-name="Smash Burger" data-price="7">
+                <img src="../assets/images/products/double.webp" alt="Smash Burger" />
+                <h3>Smash Burger</h3>
+                <h5>スマッシュバーガー</h5>
+                <p class="price">RM 7.00</p>
+                <p class="desc">Juicy smashed beef patty with crispy edges.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f2" data-name="Smash Burger Double" data-price="9">
+                <img src="../assets/images/products/double.webp" alt="Smash Burger Double" />
+                <h3>Smash Burger (Double)</h3>
+                <h5>スマッシュバーガー (ダブル)</h5>
+                <p class="price">RM 9.00</p>
+                <p class="desc">Two juicy beef patties with melted cheese.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f3" data-name="Smash Burger Triple" data-price="11">
+                <img src="../assets/images/products/double.webp" alt="Smash Burger Triple" />
+                <h3>Smash Burger (Triple)</h3>
+                <h5>スマッシュバーガー (トリプル)</h5>
+                <p class="price">RM 11.00</p>
+                <p class="desc">Triple smashed beef patties with crispy edges.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f4" data-name="Roti Bakar Sekaya" data-price="2.50">
+                <img src="../assets/images/products/roti_bakar.jpeg" alt="Roti Bakar Sekaya" />
+                <h3>Roti Bakar Sekaya</h3>
+                <h5>ロティ・バカール</h5>
+                <p class="price">RM 2.50</p>
+                <p class="desc">Classic toast, crisp outside and soft inside.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f5" data-name="Prosperity Burger" data-price="7">
+                <img src="../assets/images/products/prosperity.jpg" alt="Prosperity Burger" />
+                <h3>Prosperity (Beef)</h3>
+                <h5>繁栄バーガー</h5>
+                <p class="price">RM 7.00</p>
+                <p class="desc">Savoury beef with signature pepper glaze.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f6" data-name="Budget Set" data-price="6">
+                <img src="../assets/images/products/prosperity.png" alt="Budget Set" />
+                <h3>Budget Set</h3>
+                <h5>予算セット</h5>
+                <p class="price">RM 6.00</p>
+                <p class="desc">Delicious combo at an affordable price.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f7" data-name="Spaghetti Carbonara" data-price="7">
+                <img src="../assets/images/products/spaghetti_carbonara.jpg" alt="Spaghetti Carbonara" />
+                <h3>Spaghetti Carbonara</h3>
+                <h5>スパゲッティカルボナーラ</h5>
+                <p class="price">RM 7.00</p>
+                <p class="desc">Classic carbonara in rich cream sauce.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="f8" data-name="Spaghetti Bolognese" data-price="7">
+                <img src="../assets/images/products/spaghetti_bolognese.png" alt="Spaghetti Bolognese" />
+                <h3>Spaghetti Bolognese</h3>
+                <h5>スパゲッティボロネーゼ</h5>
+                <p class="price">RM 7.00</p>
+                <p class="desc">Classic tomato beef sauce pasta.</p>
+                <button class="add-btn">Add</button>
+            </li>
+        </ul>
+
+        <div class="section-header">
+        <h2 class="section-title">Pastries</h2>
+        </div>
+
+        <ul class="product-container">
+            <li class="product-card" data-id="s1" data-name="Cheese Tart" data-price="3">
+                <img src="../assets/images/products/cheesetart.jpeg" alt="Cheese Tart" />
+                <h3>Cheese Tart</h3>
+                <h5>チーズタルト</h5>
+                <p class="price">RM 3.00 per piece</p>
+                <p class="desc">Creamy cheese filling in a buttery crust.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="s2" data-name="Croissant" data-price="4">
+                <img src="../assets/images/products/croissant.jpg" alt="Croissant" />
+                <h3>Croissant</h3>
+                <h5>クロワッサン</h5>
+                <p class="price">RM 4.00 per piece</p>
+                <p class="desc">Golden croissant with crisp layers.</p>
+                <button class="add-btn">Add</button>
+            </li>
+
+            <li class="product-card" data-id="s3" data-name="Carrot Cake" data-price="7">
+                <img src="../assets/images/products/carrot_cake.jpg" alt="Carrot Cake" />
+                <h3>Carrot Cake</h3>
+                <h5>キャロットケーキ</h5>
+                <p class="price">RM 7.00</p>
+                <p class="desc">Classic carrot cake with rich cream cheese.</p>
+                <button class="add-btn">Add</button>
+            </li>
+        </ul>
+    </section>
+
+    <!-- MENU POPUP -->
+    <div class="menu-overlay" id="menuOverlay" hidden>
+        <div class="menu-modal">
+            <button class="menu-close" id="closeMenu">✕</button>
+            <img src="../assets/images/products/menu.jpg" alt="Menu" class="menu-image">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 KuroCabin. All rights reserved.</p>
+        <iframe src="https://free.timeanddate.com/clock/ia8x909d/n5090/fcfff/tct/pct/tt0" frameborder="0" width="340" height="18" allowtransparency="true"></iframe>
+    </footer>
+
+    <!-- Link JS -->
+    <script src="../js/products.js"></script>
+
+</body>
+</html>
